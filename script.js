@@ -1,10 +1,12 @@
+'use strict';
+
 // lesson 02
 let num = 266219;
 
 let numToStr = num.toString();
 let strToArray = numToStr.split('');
 let multipleNumbers = 1;
-for (i = 0; i < strToArray.length; i++) {
+for (let i = 0; i < strToArray.length; i++) {
   multipleNumbers *= strToArray[i];
 }
 
@@ -101,3 +103,13 @@ namePerson === 'Артем'
   : namePerson === 'Александр'
     ? console.log('преподаватель')
     : console.log('студент');
+
+// lesson 04
+const isAString = function (str) {
+  str = str.trim();
+  if (typeof str !== 'string') console.log('Это не строка!');
+  console.log(str.slice(0, 30) + '...');
+};
+isAString(
+  'Объявить функцию getServicePercentPrices. Функция возвращает итоговую стоимость за вычетом процента отката. Результат сохраняем в переменную servicePercentPrice (итоговая стоимость минус сумма отката)',
+);
