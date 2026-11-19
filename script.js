@@ -113,3 +113,26 @@ const isAString = function (str) {
 isAString(
   'Объявить функцию getServicePercentPrices. Функция возвращает итоговую стоимость за вычетом процента отката. Результат сохраняем в переменную servicePercentPrice (итоговая стоимость минус сумма отката)',
 );
+
+// lesson 07
+
+const week = [
+  'Понедельник',
+  'Вторник',
+  'Среда',
+  'Четверг',
+  'Пятница',
+  'Суббота',
+  'Воскресенье'
+];
+
+for (let weekDay of week) {
+    let today = new Date();
+    if (weekDay === 'Суббота' || weekDay === 'Воскресенье') {
+        document.write(weekDay.italics() + '<br>');
+    } else if(today.getDay() === week.indexOf(weekDay) + 1) {
+        document.write(weekDay.bold() + '<br>');
+    } else {
+        document.write(weekDay + '<br>');
+    }
+}
